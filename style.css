@@ -1,6 +1,7 @@
 body{
     font-family: sans-serif;
     background-color: #aae5a4;
+    padding: 0px;
     margin: 0px;
 }
 h1{
@@ -43,11 +44,31 @@ aside{
 }
 section{
     width: 65%;
-    float: left;
+    float: inline-start;
     margin: 5px;
 }
 article{
     width: 13%;
-    float: left;
+    float: inline-end;
     margin: 3px;
+}
+@media (max-width: 700px){
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    section {
+        order: 1;
+        width: 100%;
+        margin-right: auto;
+    }
+    aside {
+        order: 2;
+        width: 100%;
+    }
+    article {
+        order: 3;
+        width: 100%;
+    }
+
 }
